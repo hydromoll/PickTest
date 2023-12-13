@@ -1,8 +1,13 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Здравствуйте уважаемые проверяющие, в проекте есть несколько моментов, чтобы вас лишний раз не беспокоить, решил не спрашивать их сразу, но если потребуется, я легко реализую, во-первых непонятно нужно ли очищать форму после отправки, и я специально поставил задержку перед запросом, чтобы показать работоспособность кнопки при загрузке. Касательно архитектуры, она довольно необычная и не знаю, что вы подумаете, ее преимущество в том, что она позволяет легко масштабировать проект, на примере с полем ввода для телефона можно увидеть насколько все было просто. Если вам не понравится архитектура или какой-либо момент в проекте, очень прошу дать обратную связь и если можно, я поправлю замеченные вами недостатки, в остальном, я вроде как все предусмотрел и дополнительно добавил некоторые проверки (на поля имя, фамилия и количество помещение (больше нуля)).
+
+Чтобы поднять проект:
+
+1. yarn && npx react-native start
+2. Открыть еще один терминал и написать npx react-native run-ios (если тестировать на эппл симуляроте) или npx react-native run-android (для теста на android).
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
