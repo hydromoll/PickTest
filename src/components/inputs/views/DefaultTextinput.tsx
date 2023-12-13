@@ -21,7 +21,7 @@ interface InputColors {
 }
 
 const INPUT_HEIGHT = 56;
-
+const INPUT_FONT_SIZE = 14;
 export const Input: FC<InputComponentProps> = observer(
   ({controller, style}) => {
     const animatedValue = useRef(new Animated.Value(0));
@@ -43,7 +43,7 @@ export const Input: FC<InputComponentProps> = observer(
           {
             translateY: animatedValue?.current?.interpolate({
               inputRange: [0, 1],
-              outputRange: [14 / 2, 0],
+              outputRange: [INPUT_FONT_SIZE / 2, 0],
               extrapolate: 'clamp',
             }),
           },
