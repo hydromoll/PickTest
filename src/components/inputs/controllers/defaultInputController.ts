@@ -34,10 +34,10 @@ export class DefaultInputController {
     this.error = value;
   }
 
-  @computed public get value() {
+  @computed get value() {
     return this._value;
   }
-  public set value(value) {
+  set value(value) {
     this._value = value;
   }
 
@@ -52,13 +52,14 @@ export class DefaultInputController {
 
   @action.bound
   validate() {
+    const valueWithoutSpaces = this.value.trim();
     this.setFocused(false);
-    if (this.value.trim() === '') {
+    if (valueWithoutSpaces === '') {
       this.setError('Заполните поле');
       return false;
     }
     if (this.validator) {
-      const {isCorrectValue, error} = this.validator(this.value.trim());
+      const {isCorrectValue, error} = this.validator(valueWithoutSpaces);
 
       if (!isCorrectValue) {
         this.setError(error);
@@ -68,6 +69,7 @@ export class DefaultInputController {
     return true;
   }
 
+  @action.bound
   onBlur() {
     this.validate();
   }

@@ -8,7 +8,7 @@ export class PhoneInputController extends DefaultInputController {
     super({...props, value: '+7', placeholder: 'Номер телефона'});
   }
   onChange(text: string): void {
-    if (text.length === 1 || text.length === 0) {
+    if (text.length < 2) {
       this.value = '+';
     } else {
       this.value = Mask.formatPhone(text);
